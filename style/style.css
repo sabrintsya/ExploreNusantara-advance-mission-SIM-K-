@@ -53,7 +53,6 @@ h4 {
 }
 
 .content {
-    max-width: 1300px;
     margin: 0 auto;
     padding: 1.6rem 1rem;
 }
@@ -135,7 +134,7 @@ h4 {
     line-height: 26px;
     font-weight: 300;
     text-align: center;
-    color: #83a9c4;
+    color: #fff;
 }
 
 
@@ -295,7 +294,7 @@ section .heading .subtitle {
     font-weight: 300;
 }
 
-
+/* destination */
 .destination {
     background-color: var(--primary-color);
 
@@ -348,7 +347,6 @@ section .heading .subtitle {
     bottom: 0;
     left: 0;
     padding: 0rem 1rem;
-    transform: translateY(-20px);
     color: #fff;
     z-index: 100;
     cursor: pointer;
@@ -358,7 +356,6 @@ section .heading .subtitle {
 
 }
 
-
 .destination .card .content-card h4 {
     font-size: 42px;
     font-family: 'Roboto';
@@ -366,35 +363,31 @@ section .heading .subtitle {
     font-weight: 500;
     color: #fff;
     letter-spacing: 3px;
+    position: absolute;
+    inset: auto auto 30px 30px;
+    transition: inset .3s ease-out;
+}
+
+.destination .items .card:hover .content-card h4 {
+    inset: auto auto 220px 30px;
 }
 
 .destination .card .content-card p {
     font-size: 16px;
     font-weight: 300;
     color: #eee;
+    opacity: 0;
+    transition: opacity .3s ease-out;
+    inset: auto auto 80px 30px;
 }
 
-.destination .card .content-card .btn-read {
-    font-size: 16px;
-    line-height: 16px;
-    font-weight: 300;
-    color: #eee;
-    padding: 0.8rem 2.4rem;
-    width: fit-content;
-    background-color: transparent;
-    border: 1.6px solid #eee;
-    cursor: pointer;
-    transition: all 1s ease-in;
-    margin-top: 1rem;
+.destination .items .card:hover .content-card p {
+    opacity: 1;
+    transition: opacity .5s .1s ease-in;
+    background-color: #397181;
 }
 
-.destination .card .content-card .btn-read:hover {
-    padding-left: 3rem;
-    color: #fff;
-    border: 1.6px solid #fff;
-
-}
-
+/* blog */
 .blog {
     background-color: #010101;
 
@@ -461,7 +454,7 @@ section .heading .subtitle {
     color: #fff;
 }
 
-/*-- styling contact --*/
+/* styling contact */
 .contact .items {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

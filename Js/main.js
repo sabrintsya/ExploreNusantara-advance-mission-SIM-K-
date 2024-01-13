@@ -1,8 +1,12 @@
-
+// Get the navbar element by its ID
 const navbar = document.getElementById('navbar');
+// Attach a function to the window's scroll event
 window.onscroll = function () {
+    // Call the scrollFunction when scrolling occurs
     scrollFunction()
 }
+
+// Function to handle the scroll behavior
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         navbar.classList.add('active')
@@ -12,14 +16,16 @@ function scrollFunction() {
     }
 }
 
-
+// ScrollReveal options for animation
 const scrollrevealOption = {
     distance: '50px',
     origin: 'bottom',
     duration: 1500,
 }
 
+// ScrollReveal animation for '.home h1'
 ScrollReveal().reveal('.home h1',scrollrevealOption)
+// ScrollReveal animation for '.home h4' with a delay of 1200
 ScrollReveal().reveal('.home h4',{
     ...scrollrevealOption,
     delay:800,
@@ -61,14 +67,13 @@ ScrollReveal().reveal('.next .card .content-card  p',{
     delay:2000,
 })
 
-
-
+// ScrollReveal animation for form inputs with the same options
 ScrollReveal().reveal('.next .card .content-card p',{
     ...scrollrevealOption,
     delay:600,
 })
 
-
+// ScrollReveal animation for '.row .card' with the same options
 ScrollReveal().reveal('form .input',scrollrevealOption)
 ScrollReveal().reveal('row .card',scrollrevealOption)
 

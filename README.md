@@ -12,7 +12,7 @@ Explore Nusantara adalah sebuah Website tentang Travel keindahan alam indonesia,
 # Instalasi
 - Kloning Repositori :
 - Bash
-- git clone https://github.com/[username]/[nama-repositori].git
+- git clone https://github.com/sabrintsya/ExploreNusantara-advance-mission-Sim-K.git
 
 # Instalasi Dependensi:
 - Bash
